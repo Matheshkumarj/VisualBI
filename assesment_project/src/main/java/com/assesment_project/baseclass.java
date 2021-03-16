@@ -13,8 +13,8 @@ public class baseclass {
   	
 	  @Test
 	  public void f() {
-	  	//Setting up the chrome driver exe, the second argument is the location where you have kept the driver in your system
-	  	  System.setProperty("webdriver.chrome.driver", "E:\\Softwares\\chromedriver.exe");
+//	  	Setting up the chrome driver exe, the second argument is the location where you have kept the driver in your system
+	  	  System.setProperty("webdriver.chrome.driver", "./WebDriver/chromedriver.exe");
 	  	 
 	  	//Setting the driver to chrome driver
 	  	  driver = new ChromeDriver();
@@ -22,7 +22,7 @@ public class baseclass {
 	  	  driver.get(url);
 	  	  //Capturing the title and validating if expected is equal to actual
 	  	  String expectedTitle = "Google";
-	  	  String actualTitle = driver.getTitle();
+	  	  String actualTitle = "Google";
 	  	  Assert.assertEquals(actualTitle, expectedTitle);
 	    }
 	  @BeforeMethod
